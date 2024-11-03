@@ -14,6 +14,11 @@ A FeetSaber mod for Beat Saber which is inspired by [NalulunaModifier](https://g
   - **Middle Notes to Feet**: Move the middle notes to foot-level.
   - **Bottom Notes to Feet**: Move the bottom notes to foot-level.
 
+## Dependencies
+
+- BeatSaberMarkupLanguage
+- BS Utils
+
 # Quick Start
 
 WIP
