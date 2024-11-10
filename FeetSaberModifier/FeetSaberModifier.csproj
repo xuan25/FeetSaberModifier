@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -174,12 +174,12 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="UI\Avatar.png" />
+    <EmbeddedResource Include="UI\4Saber.png" />
     <EmbeddedResource Include="UI\BottomNotesToFeet.png" />
-    <EmbeddedResource Include="UI\Foot.png" />
-    <EmbeddedResource Include="UI\Four.png" />
+    <EmbeddedResource Include="UI\EyeSlash.png" />
+    <EmbeddedResource Include="UI\FeetSaber.png" />
+    <EmbeddedResource Include="UI\Location.png" />
     <EmbeddedResource Include="UI\MiddleNotesToFeet.png" />
-    <EmbeddedResource Include="UI\No.png" />
     <EmbeddedResource Include="UI\TopNotesToFeet.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

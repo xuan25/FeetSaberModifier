@@ -2,12 +2,12 @@
   <vertical child-control-height='false' pad-top='10'>
       <horizontal child-control-height='false' child-expand-height='false' child-control-width='false' child-expand-width='false' spacing='4' horizontal-fit='PreferredSize'>
         <vertical child-control-height='false' child-expand-height='false' child-control-width='false' child-expand-width='false'>
-          <modifier value='feetSaber' apply-on-change='true' bind-value='true' source='FeetSaberModifier.UI.Foot.png' text='FeetSaber' hover-hint='Bind saber to your foot.'></modifier>
-          <modifier value='fourSabers' apply-on-change='true' bind-value='true' source='FeetSaberModifier.UI.Four.png' text='4-Saber' hover-hint='BeatSaber + FeetSaber'></modifier>
+          <modifier value='feetSaber' apply-on-change='true' bind-value='true' source='FeetSaberModifier.UI.FeetSaber.png' text='FeetSaber' hover-hint='Hit notes with your feet.'></modifier>
+          <modifier value='fourSabers' apply-on-change='true' bind-value='true' source='FeetSaberModifier.UI.4Saber.png' text='4-Saber' hover-hint='Hit notes with your feet or hands.'></modifier>
         </vertical>
         <vertical child-control-height='false' child-expand-height='false' child-control-width='false' child-expand-width='false'>
-          <modifier value='hideSabers' apply-on-change='true' bind-value='true' source='FeetSaberModifier.UI.No.png' text='Hide Sabers' hover-hint='Make your sabers invisible. No clash effect and burn mark.'></modifier>
-          <modifier value='onTrackers' apply-on-change='true' bind-value='true' source='FeetSaberModifier.UI.Avatar.png' text='Bind to Trackers' hover-hint='Bind sabers to trackers if available instead of avatar foot.'></modifier>
+          <modifier value='hideSabers' apply-on-change='true' bind-value='true' source='FeetSaberModifier.UI.EyeSlash.png' text='Hide Sabers' hover-hint='Make your sabers invisible.'></modifier>
+          <modifier value='onTrackers' apply-on-change='true' bind-value='true' source='FeetSaberModifier.UI.Location.png' text='Bind to Trackers' hover-hint='Bind sabers to trackers if available instead of avatar feet.'></modifier>
         </vertical>
         <vertical child-control-height='false' child-expand-height='false' child-control-width='false' child-expand-width='false'>
           <modifier value='topNotesToFeet' apply-on-change='true' bind-value='true' source='FeetSaberModifier.UI.TopNotesToFeet.png' text='Top Notes to Feet' hover-hint="Move the top notes to foot-level."></modifier>
