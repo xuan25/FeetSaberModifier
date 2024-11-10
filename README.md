@@ -1,24 +1,50 @@
 # FeetSaber Modifier for Beat Saber
 
-A FeetSaber mod for Beat Saber which is inspired by [NalulunaModifier](https://github.com/nalulululuna/NalulunaModifier/). Supporting later achieved versions of Beat Saber.
+A game modifier allowing you to hit notes with your feet!
 
-![menu](img/menu.png)
+*Inspired by [NalulunaModifier](https://github.com/nalulululuna/NalulunaModifier/).*
 
-- Game Modes
-  - **FeetSaber**: Bind sabers to your foot.
-  - **4-Saber**: Beat Saber + FeetSaber (= NinjaSaber in NalulunaModifier)
-- Tweaks
-  - **Hide Sabers**: Make your sabers invisible. No clash effect and burn mark.
-  - **Bind to Trackers**: Bind sabers to trackers if available instead of avatar foot.
-  - **Top Notes to Feet**: Move the top notes to foot-level.
-  - **Middle Notes to Feet**: Move the middle notes to foot-level.
-  - **Bottom Notes to Feet**: Move the bottom notes to foot-level.
+## Features
+
+- Allows you to hit notes with your feet or hands.
+- Bind sabers to your avatar, trackers, or controllers.
+- Adjust note levels to foot-level.
+
+## Options
+
+![menu](img/menu.jpg)
+
+- **Game Modes**
+  - **FeetSaber**: Hit notes with your feet.
+  - **4-Saber**: Use both hands and feet to hit notes.
+- **Tweaks**
+  - **Hide Sabers**: Make sabers invisible.
+  - **Bind to Trackers**: Bind sabers to trackers if available, instead of avatar feet.
+  - **Top Notes to Feet**: Move top notes to foot-level.
+  - **Middle Notes to Feet**: Move middle notes to foot-level.
+  - **Bottom Notes to Feet**: Move bottom notes to foot-level.
 
 ## Dependencies
 
 - BeatSaberMarkupLanguage
 - BS Utils
+- (Optional) CustomAvatar
 
-# Quick Start
+## Quick Start
 
-WIP
+1. Install the mod and its dependencies.
+2. Launch the game and go to the playlist scene.
+3. In the `MODS` tab of modifier panel (left), select `FEETSABER`.
+4. Choose either `FeetSaber` or `4-Saber`.
+5. Adjust other options as needed.
+6. Start playing!
+
+### Notes
+
+- For **non-FBT users**: sabers will be bound to your controllers. You may want to strap your controllers to your ankle.
+- For **FBT users**: sabers will be bound to your feet trackers.
+- For **FBT users** with **avatar enabled**: sabers will be bound to your avatar's feet by default. If you want them bound to your feet trackers instead, please select the `Bind to Trackers` option.
+
+## Known Issues
+
+- Saber trails may not work properly.
