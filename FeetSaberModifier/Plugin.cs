@@ -1,4 +1,5 @@
 ﻿using BeatSaberMarkupLanguage.GameplaySetup;
+using BeatSaberMarkupLanguage.Util;
 using HarmonyLib;
 using IPA;
 using IPA.Config;
@@ -60,9 +61,14 @@ namespace FeetSaberModifier
         public void OnApplicationStart()
         {
             Config.Read();
-            GameplaySetup.instance.AddTab(TabName, $"{Name}.UI.ModifierUI.bsml", ModifierUI.instance);
+            MainMenuAwaiter.MainMenuInitializing += OnMainMenuInitializing;
             new GameObject("FeetSaberModifierController").AddComponent<FeetSaberModifierController>();
             ApplyHarmonyPatches();
+        }
+
+        private void OnMainMenuInitializing()
+        {
+            GameplaySetup.Instance.AddTab(TabName, $"{Name}.UI.ModifierUI.bsml", ModifierUI.instance);
         }
 
         public static void ApplyHarmonyPatches()
