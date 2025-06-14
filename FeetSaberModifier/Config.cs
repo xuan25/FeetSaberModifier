@@ -24,7 +24,7 @@ namespace FeetSaberModifier
         public static float avatarFootPosX = 0;
         public static float avatarFootPosY = 0;
         public static float avatarFootPosZ = 0;
-        public static float avatarFootRotX = 0;
+        public static float avatarFootRotX = -90;
         public static float avatarFootRotY = 0;
         public static float avatarFootRotZ = 0;
         public static float trackerFootPosX = 0;

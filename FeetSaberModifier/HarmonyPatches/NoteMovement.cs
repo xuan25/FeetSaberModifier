@@ -7,13 +7,16 @@ namespace FeetSaberModifier.HarmonyPatches
     static class NoteMovementInit
     {
         [HarmonyPriority(Priority.VeryLow)]
-        static void Prefix(ref Vector3 moveStartPos, ref Vector3 moveEndPos, ref Vector3 jumpEndPos)
+        static void Prefix(ref NoteSpawnData noteSpawnData)
         {
             if (Config.feetSaber)
             {
-                moveStartPos.y = Config.feetNotesY;
-                moveEndPos.y = Config.feetNotesY;
-                jumpEndPos.y = Config.feetNotesY;
+                noteSpawnData = new NoteSpawnData(
+                    new Vector3(noteSpawnData.moveStartOffset.x, Config.feetNotesY, noteSpawnData.moveStartOffset.z),
+                    new Vector3(noteSpawnData.moveEndOffset.x, Config.feetNotesY, noteSpawnData.moveEndOffset.z),
+                    new Vector3(noteSpawnData.jumpEndOffset.x, Config.feetNotesY, noteSpawnData.jumpEndOffset.z),
+                    noteSpawnData.gravityBase
+                );
             }
         }
     }

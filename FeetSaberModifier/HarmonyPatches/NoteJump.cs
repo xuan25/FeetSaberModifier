@@ -11,9 +11,9 @@ namespace FeetSaberModifier.HarmonyPatches
         static void Postfix(
             ref Quaternion ____middleRotation,
             ref Quaternion ____endRotation,
-            Vector3 startPos)
+            Vector3 moveEndOffset)
         {
-            if (Config.feetSaber || (Config.fourSabers && startPos.y == Config.feetNotesY))
+            if (Config.feetSaber || (Config.fourSabers && moveEndOffset.y == Config.feetNotesY))
             {
                 ____middleRotation = Quaternion.identity;
                 ____endRotation = Quaternion.identity;
@@ -28,15 +28,10 @@ namespace FeetSaberModifier.HarmonyPatches
         static void Postfix(
             NoteJump __instance,
             ref Vector3 __result,
-            AudioTimeSyncController ____audioTimeSyncController,
-            float ____beatTime,
-            float ____jumpDuration,
             Vector3 ____localPosition,
             Vector3 ____startPos,
-            Vector3 ____endPos,
             Quaternion ____worldRotation,
-            Quaternion ____middleRotation,
-            Transform ____rotatedObject)
+            Quaternion ____middleRotation)
         {
             if (Config.feetSaber)
             {

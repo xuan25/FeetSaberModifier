@@ -3,12 +3,12 @@
   "id": "FeetSaberModifier",
   "name": "FeetSaberModifier",
   "author": "Xuan25",
-  "version": "0.0.1+1.39.1",
+  "version": "0.0.1+1.40.6",
   "description": "A FeetSaber mod for Beat Saber",
-  "gameVersion": "1.39.1",
+  "gameVersion": "1.40.6",
   "dependsOn": {
-    "BSIPA": "^4.3.5",
-    "BeatSaberMarkupLanguage": "^1.12.3",
+    "BSIPA": "^4.3.6",
+    "BeatSaberMarkupLanguage": "^1.12.5",
     "BS Utils": "^1.14.2"
   }
 }

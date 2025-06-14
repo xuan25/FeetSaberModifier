@@ -13,7 +13,7 @@ namespace FeetSaberModifier.HarmonyPatches
 	[HarmonyPatch(typeof(NoteController), "Init")]
     static class NoteControllerInit
 	{
-		static void Prefix(ref NoteData noteData, ref Vector3 moveStartPos, ref Vector3 moveEndPos, ref Vector3 jumpEndPos, Transform ____noteTransform, out NoteLineLayer __state)
+		static void Prefix(ref NoteData noteData, ref NoteSpawnData noteSpawnData, Transform ____noteTransform, out NoteLineLayer __state)
 		{
 			NoteLineLayer noteLineLayer;
 			if ((int)noteData.noteLineLayer <= 2)
@@ -57,22 +57,31 @@ namespace FeetSaberModifier.HarmonyPatches
 
 			if (Config.topNotesToFeet && (noteLineLayer == NoteLineLayer.Top))
 			{
-				moveStartPos = new Vector3(moveStartPos.x, Config.feetNotesY, moveStartPos.z);
-				moveEndPos = new Vector3(moveEndPos.x, Config.feetNotesY, moveEndPos.z);
-				jumpEndPos = new Vector3(jumpEndPos.x, Config.feetNotesY, jumpEndPos.z);
+				noteSpawnData = new NoteSpawnData(
+					new Vector3(noteSpawnData.moveStartOffset.x, Config.feetNotesY, noteSpawnData.moveStartOffset.z),
+					new Vector3(noteSpawnData.moveEndOffset.x, Config.feetNotesY, noteSpawnData.moveEndOffset.z),
+					new Vector3(noteSpawnData.jumpEndOffset.x, Config.feetNotesY, noteSpawnData.jumpEndOffset.z),
+					noteSpawnData.gravityBase
+				);
 			}
 			if (Config.middleNotesToFeet && (noteLineLayer == NoteLineLayer.Upper))
 			{
-				moveStartPos = new Vector3(moveStartPos.x, Config.feetNotesY, moveStartPos.z);
-				moveEndPos = new Vector3(moveEndPos.x, Config.feetNotesY, moveEndPos.z);
-				jumpEndPos = new Vector3(jumpEndPos.x, Config.feetNotesY, jumpEndPos.z);
-			}
+                noteSpawnData = new NoteSpawnData(
+                    new Vector3(noteSpawnData.moveStartOffset.x, Config.feetNotesY, noteSpawnData.moveStartOffset.z),
+                    new Vector3(noteSpawnData.moveEndOffset.x, Config.feetNotesY, noteSpawnData.moveEndOffset.z),
+                    new Vector3(noteSpawnData.jumpEndOffset.x, Config.feetNotesY, noteSpawnData.jumpEndOffset.z),
+                    noteSpawnData.gravityBase
+                );
+            }
 			if (Config.bottomNotesToFeet && (noteLineLayer == NoteLineLayer.Base))
 			{
-				moveStartPos = new Vector3(moveStartPos.x, Config.feetNotesY, moveStartPos.z);
-				moveEndPos = new Vector3(moveEndPos.x, Config.feetNotesY, moveEndPos.z);
-				jumpEndPos = new Vector3(jumpEndPos.x, Config.feetNotesY, jumpEndPos.z);
-			}
+                noteSpawnData = new NoteSpawnData(
+                    new Vector3(noteSpawnData.moveStartOffset.x, Config.feetNotesY, noteSpawnData.moveStartOffset.z),
+                    new Vector3(noteSpawnData.moveEndOffset.x, Config.feetNotesY, noteSpawnData.moveEndOffset.z),
+                    new Vector3(noteSpawnData.jumpEndOffset.x, Config.feetNotesY, noteSpawnData.jumpEndOffset.z),
+                    noteSpawnData.gravityBase
+                );
+            }
 		}
 
 		static void Postfix(Transform ____noteTransform, NoteLineLayer __state)

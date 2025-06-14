@@ -7,7 +7,7 @@ namespace FeetSaberModifier.HarmonyPatches
     [HarmonyPatch(typeof(SphereCuttableBySaber), nameof(SphereCuttableBySaber.Cut))]
     static class SphereCuttableBySaberCut
     {
-        static bool Prefix(SphereCuttableBySaber __instance, Saber saber, Vector3 cutPoint, SphereCollider ____collider)
+        static bool Prefix(SphereCuttableBySaber __instance, Saber saber, SphereCollider ____collider)
         {
             if (__instance.canBeCut)
             {
